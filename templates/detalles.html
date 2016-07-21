@@ -1,0 +1,245 @@
+<div class="container" >
+	<div ng-controller="detalles" ng-repeat="datos in detallesPersona">
+		<div  class="container navbar-default" style="" >  
+		<!-- <div  class="container navbar-default" style="position:fixed; " >   -->
+	         <div style="text-align:center;">
+				<br>
+				<a style="color:black;" class="btn btn-raised" href="#/afirmacion" 	 data-icon="arrow-l">Regresar</a>
+				<br>
+				<strong><h5>{{ datos.Nombre+ " " + datos.ApPaterno + " " + datos.ApMaterno }}</h5></strong>
+				
+				
+			</div>
+	       <!--  <table class="table table-striped ">
+			 	<tr>
+			 		<th>Clase</th><th style="text-align:center;">Cursado</th><th style="text-align:center;">Fecha</th>
+			 	</tr>
+			</table> -->
+	    </div>
+
+		<!-- <br><br><br><br><br> -->
+		
+		<div class="container" ng-repeat="datos in detallesPersona ">
+			<form id="formDetalle" ng-submit="updatePersona(frmvalue)">
+			
+				<div class="form-group">
+					<strong><h4>Validar Clase</h4></strong>
+					<select ng-model="frmvalue.idescuela" class="form-control">
+						<option value="1">Encuentro</option>
+						<option value="2">ENC</option>
+						<option value="3">EDNC 1</option>
+						<option value="4">EDNC 2</option>
+						<option value="5">EDNC 3</option>
+						<option value="6">EDNC 4</option>
+						<option value="7">EDNC 5</option>
+						<option value="8">EDNC 6</option>
+						<option value="9">EDNC 7</option>
+						<option value="10">EDNC 8</option>
+						<option value="11">ELCP 1</option>
+						<option value="12">ELCP 2</option>
+						<option value="13">ELCP 3</option>
+						<option value="14">ELCP 4</option>
+						<option value="15">ELCP 5</option>
+						<option value="16">ELCP 6</option>
+						<option value="17">ELCP 7</option>
+						<option value="18">RET DE LCP</option>
+						<option value="19">EDM 1</option>
+						<option value="20">EDM 2</option>
+						<option value="21">EDM 3</option>
+						<option value="22">EDM 4</option>
+						<option value="23">EDM 5</option>
+						<option value="24">EDM 6</option>
+						<option value="25">EDM 7</option>
+						<option value="26">EDM 8</option>
+						<option value="27">EDM 9</option>
+						<option value="28">EDM 10</option>
+						<option value="29">RET DE MENTORES</option>
+					    
+					</select>				
+				    	
+				</div>
+				<div class="form-group" style="text-align:center;" >	
+					<button  type="submit" value="submit" class="btn btn-primary btn-lg btn-block btn-raised">Actualizar Datos</button>    	
+				</div>
+				<table class="table table-striped">
+				 	<tr>
+				 		<th>Clase</th><th style="text-align:center;">Cursado</th><th style="text-align:center;">Fecha</th>
+				 	</tr>
+				 	<tr >
+				 		<td><h5>ENCUENTRO</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.Encuentro" checked="datos.Encuentro"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Encuentro" >{{datos.Fecha_Encuentro | date : 'dd/MM/y'}}</h5>  </td>	 		
+				 	</tr>
+				 	<tr >
+				 		<td><h5>ENC</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.ENC" checked="datos.ENC"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_ENC" >{{datos.Fecha_ENC}}</h5>  </td>	 		
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDNC 1<h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDNC1" checked="datos.EDNC1"  ng-true-value="'1'" ng-false-value="'0'" disabled="false" type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDNC1" >{{datos.Fecha_EDNC1}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDNC 2</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDNC2" checked="datos.EDNC2"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDNC2" >{{datos.Fecha_EDNC2}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDNC 3</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDNC3" checked="datos.EDNC3"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDNC3" >{{datos.Fecha_EDNC3}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDNC 4</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDNC4" checked="datos.EDNC4"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDNC4" >{{datos.Fecha_EDNC4}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDNC 5</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDNC5" checked="datos.EDNC5"  ng-true-value="'1'" ng-false-value="'0'" disabled="false" type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDNC5" >{{datos.Fecha_EDNC5}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDNC 6</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDNC6" checked="datos.EDNC6"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDNC6" >{{datos.Fecha_EDNC6}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDNC 7</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDNC7" checked="datos.EDNC7"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDNC7" >{{datos.Fecha_EDNC7}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDNC 8</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDNC8" checked="datos.EDNC8"  ng-true-value="'1'" ng-false-value="'0'" disabled="false" type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDNC8" >{{datos.Fecha_EDNC8}}</h5>  </td>
+				 	</tr>
+
+				 	<tr>
+				 		<td><h5>ELCP 1<h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.ELCP1" checked="datos.ELCP1"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_ELCP1" >{{datos.Fecha_ELCP1}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>ELCP 2</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.ELCP2" checked="datos.ELCP2"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_ELCP2" >{{datos.Fecha_ELCP2}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>ELCP 3</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.ELCP3" checked="datos.ELCP3"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_ELCP3" >{{datos.Fecha_ELCP3}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>ELCP 4</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.ELCP4" checked="datos.ELCP4"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_ELCP4" >{{datos.Fecha_ELCP4}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>ELCP 5</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.ELCP5" checked="datos.ELCP5"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_ELCP5" >{{datos.Fecha_ELCP5}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>ELCP 6</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.ELCP6" checked="datos.ELCP6"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_ELCP6" >{{datos.Fecha_ELCP6}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>ELCP 7</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.ELCP7" checked="datos.ELCP7"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_ELCP7" >{{datos.Fecha_ELCP7}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>ReLCP</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.RELCP" checked="datos.RELCP"  ng-true-value="'1'" ng-false-value="'0'" disabled="false" type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_RELCP" >{{datos.Fecha_RELCP}}</h5>  </td>
+				 	</tr>
+
+				 	<tr>
+				 		<td><h5>EDM 1<h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDM1" checked="datos.EDM1"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDM1" >{{datos.Fecha_EDM1}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDM 2</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDM2" checked="datos.EDM2"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDM2" >{{datos.Fecha_EDM2}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDM 3</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDM3" checked="datos.EDM3"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDM3" >{{datos.Fecha_EDM3}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDM 4</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.ELCP4" checked="datos.EDM4"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDM4" >{{datos.Fecha_EDM4}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDM 5</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDM5" checked="datos.EDM5"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDM5" >{{datos.Fecha_EDM5}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDM 6</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDM6" checked="datos.EDM6"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDM6" >{{datos.Fecha_EDM6}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDM 7</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDM7" checked="datos.EDM7"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDM7" >{{datos.Fecha_EDM7}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDM 8</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDM8" checked="datos.EDM8"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDM8" >{{datos.Fecha_EDM8}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDM 9</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDM9" checked="datos.EDM9"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDM9" >{{datos.Fecha_EDM9}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>EDM 10</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.EDM10" checked="datos.EDM10"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_EDM10" >{{datos.Fecha_EDM10}}</h5>  </td>
+				 	</tr>
+				 	<tr>
+				 		<td><h5>ReDM</h5></td>
+				 		<td style="text-align:center;"> <input ng-model="datos.RELCP" checked="datos.RELCP"  ng-true-value="'1'" ng-false-value="'0'" disabled="false"  type="checkbox" > </td>
+				 		<td style="text-align:center;"> <h5 ng-model="datos.Fecha_RELCP" >{{datos.Fecha_RELCP}}</h5>  </td>
+				 	</tr>
+
+
+				</table>
+
+			
+			  	<!-- <div class="panel panel-default">
+			    	<div class="panel-heading" style="text-align:center;" role="tab" id="headingOne">
+			            <h4 class="panel-title">
+			               <a  role="button" > EDNC </a>
+			            </h4>
+			    	</div>
+			    </div> -->
+			    
+			
+				
+
+
+			  
+				<!-- <div class="form-group">
+					<label for="edad">Edad</label>			
+				    <input type="text" ng-model="datos.Edad" class="form-control">			
+				</div> -->
+				
+				
+				
+
+			</form>
+		</div>
+		
+	</div>	
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+
+	<div class="form-group">					
+		<input type="search" ng-model="query" placeholder="Buscar Persona" class="form-control">
+	</div>
+	<br>
+
+	<table class="table table-striped container">
+	 	<tr>
+	 		<th>Persona</th><th style="text-align:center;">Datos</th><th style="text-align:center;">Eliminar</th>
+	 	</tr>
+	 	<tr ng-repeat="persona in personas | filter: query track by $index">
+	 		<td>{{ persona.Nombre +' '+ persona.ApPaterno+' '+ persona.ApMaterno  }}</td>
+	 		<td style="text-align:center;"><a style="color:black;" class="btn btn-raised" href="#/detalles/{{persona.IdPersona}}">Datos</a></td>
+	 	<!-- <td style="text-align:center;"><button class="btn btn-primary" ng-click="cargar(persona.IdPersona)">Datos</button></td> -->
+	 		<td style="text-align:center;"><button class="btn btn-danger" ng-click="removeData(persona.IdPersona)">x</button></td>
+	 	</tr>
+	</table>
+
+</div>

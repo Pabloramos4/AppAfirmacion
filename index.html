@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+  <head>
+    <meta charset="utf-8">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+    
+    <title>Infovision appAfirmacion</title>
+    <!-- Bootstrap -->
+    <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   
+    
+     
+    <!-- JQuery -->
+    <script src="./lib/jquery.min.js"></script> <!-- jQuery 2.1.4  -->
+    
+    <!-- JQuery-Mobile -->
+    <!-- Web -->
+    <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script> -->
+    <!-- local -->
+     <link rel="stylesheet" href="./lib/jquerymobile/jquery.mobile-1.4.3.min.css" />
+    <script src="./lib/jquerymobile/jquery.mobile-1.4.3.min.js"></script>
+    
+    <!-- AngularJS -->
+    <script src="./lib/angularjs/angular.min.js"></script>  <!-- AngularJS v1.4.1 -->
+    <script src="./lib/angularjs/angular-route.min.js" ></script> <!--  AngularJS v1.4.1 -->
+
+    <!-- Archivos de Control -->
+    <script src="./js/app.js"></script>
+    <script src="./js/controller.js"></script>    
+     <link href="./lib/bootstrap/css/bootstrap-material-design.min.css" rel="stylesheet">
+   <script src="./lib/bootstrap/js/material.min.js"></script> 
+   
+    <script type="text/javascript">
+      $.material.init();
+    </script>
+  </head>
+
+  <body>
+  <!-- Header -->
+  <div class="pageContainer">
+    <div  class="navbar navbar-fixed-top navigation">
+        <div data-role="header" style="overflow:hidden">
+        <strong><h4 style="text-align:center;">AppAfirmacion</h4></strong>
+          <a href="#/" data-icon="gear" class="ui-btn-right">Opcion</a>
+          <br>
+          <div data-role="navbar">
+            <ul>
+              <li><a href="#/" data-icon="edit">Notas</a></li>
+              <li><a href="#/afirmacion" ng-click="cargarTabla()" data-icon="user">Afirmacion</a></li>
+              <li><a href="#/registro" data-icon="plus" >Registro</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+    <!-- Contenedor -->
+    <div class="container">   
+      <br><br><br><br><br><br>
+      <ng-view></ng-view>
+    </div>
+  </div>
+
+</body>
+</html>
